@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'PingFangMedium';
+    src: url('PingFang_Medium.otf');
+}
+
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('Avenir-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'PingFangRegular';
+    src: url('PingFang-Regular.otf');
+}
+@font-face {
+    font-family: 'AvenirNext-Regular';
+    src: url('Avenir-Regular.ttf');
+}
