@@ -1,32 +1,43 @@
 const productsConfig = {
     title: 'Vanus',
-    introduce: 'Vanus is a serverless event platform for building Event-Driven Architecture (EDA) applications made easy. It is used to collect, store, distribute, and process events.',
+    introduce: 'Serverless event platform for easily building Event-Driven Architecture(EDA) applications. ',
+    introduce2:'Vanus provides enterprises and organizations an innovative platform  for collecting, storing, distributing, and processing events at scale.',
     featureTxts: ['Serverless', 'Open-Source', 'Event-Driven'],
-    subTitle: 'Connect the Future of Cloud-Native with Vanus',
-    subIntroduce: 'The future of Cloud-Native is serverless . Vanus is the best eventing platform for the serverless era',
+    subTitle: 'Connect the Future of Cloud Computing  with Vanus',
+    subIntroduce: 'The future of Cloud Computing is serverless. Vanus is the best event platform for the serverless era. ',
     subFeatureTxts: [{
-        title: 'standardization',
-        content: 'Unified processing of events such as customization and SaaS products Fully oriented towards standard CloudEvent'
+        title: 'Standards-based',
+        content: 'Implement CloudEvents standards, and embrace an open-source ecosystem.'
     }, {
-        title: 'Interoperability',
-        content: 'Preset event source and destination Support cross-network, cross-region, cross-service connections',
+        title: 'Global routing',
+        content: 'Build event platforms globally for hybrid and multi-cloud',
     }, {
-        title: 'out-of-box',
-        content: 'The whole link is observable and traceable Scale down to zero and up from zero'
+        title: 'Elasticity',
+        content: 'Millisecond level response, automatic elastic scaling of the entire link.'
+    }],
+    subFeatureTxts2: [{
+        title: 'Plentiful event sources',
+        content: 'Preset rich event sources and sinks; integrate customized/SaaS applications and cloud service products.'
+    }, {
+        title: 'Workflow',
+        content: 'With built-in Serverless workflow, users can easily build EDA applications.',
+    }, {
+        title: 'Observasity',
+        content: 'The entire link is observable and traceable.Support event search, replay, and retry configuration.'
     }],
     casesTitle: 'Popular Use Cases',
     casesIntroduce: 'Explore some popular cases here',
     casesList: [{
         name: 'IOT',
         title: 'IoT',
-        content: ['The IoT network connects a large number of devices. How to ensure the stability and security of the transmission channel? How to receive and process the massive data uploaded by the device, and ensure that the server-side instructions are issued to the device?',
-            'Vanus is fully compatible with the MQTT protocol, and supports various IoT communication protocols such as CoAP/LwM2M, which ensures the integrity of the data, and can be configured to perform secondary processing of the data, and finally transmit it to the server, reflecting a strong data carrying capacity']
+        content: ['The IoT networks connect massive devices and process enormous data in real time.  Data transmission stability and security are vital in IoT scenarios.',
+            'Vanus is fully compatible with the MQTT protocol and supports various IoT communication protocols (CoAP/LwM2M). It adopts a high-availability distributed storage model, which ensures data transmission stability and security. The business logic/flow can be completed within just a few clicks by leveraging its powerful computation engine. ']
     }, {
         name: 'Data Integration',
         title: 'Data Integration',
-        content: ['For data integration/data transmission services, local data needs to be synchronized/migrated to the cloud, which is simple and convenient to meet business scenarios such as data uploading to the cloud, data off-site disaster recovery, and business system data transfer.',
-            'There is a wide variety of resources at the source and destination of the data transfer, expensive resources to continuously use, and lack of monitoring of the synchronization process.',
-            'Using Vanus can simplify the complexity of data integration and process the process in a low-code way; greatly reduce resource consumption in a serverless operation mode; at the same time, the full-link data observability allows you to understand the health of the transmission in real time']
+        content: ['Modern complex applications have a variety of data transfer sources and destinations. It is expensive to use resources continuously. Besides, there is a lack of monitoring mechanisms during the synchronization process.',
+            'Vanus enables enterprises to simplify data integration complexity.  Presetting plentiful sources/sinks and providing rich open-source development templates,  Vanus allows users to tackle business with low code.',
+            'Vanus extensively reduce resource consumption in a serverless operation mode;  meanwhile, the entire link is observable,  empowering users to learn the transmission health status in real-time.']
     }]
 }
 

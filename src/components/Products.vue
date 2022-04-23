@@ -3,51 +3,75 @@
     <div class="common-background">
       <Navigation :menuList="menuList" />
       <div class="title-container">
-        <div style="position: relative; z-index: 2">
-          <div class="title-name">{{ productsConfig.title }}</div>
-          <div class="title-content">{{ productsConfig.introduce }}</div>
-        </div>
-        <div class="feature-list-container">
-          <div
-            class="feature-item"
-            v-for="(item, index) in productsConfig.featureTxts"
-            :key="item"
-          >
-            <div class="feature-img">
-              <img :src="featureImgList[index]" />
-            </div>
-
-            <div class="feature-name">{{ item }}</div>
+        <div id="center-page" style="position: relative">
+          <div style="position: relative; z-index: 2">
+            <div class="title-name">{{ productsConfig.title }}</div>
+            <div class="title-content">{{ productsConfig.introduce }}</div>
+            <div class="title-sub-content">{{ productsConfig.introduce2 }}</div>
           </div>
+          <div class="feature-list-container">
+            <div
+              class="feature-item"
+              v-for="(item, index) in productsConfig.featureTxts"
+              :key="item"
+            >
+              <div class="feature-img">
+                <img :src="featureImgList[index]" />
+              </div>
+
+              <div class="feature-name">{{ item }}</div>
+            </div>
+          </div>
+          <div class="background-bg"></div>
         </div>
-        <div class="background-bg"></div>
       </div>
       <div class="diliver-container">
         <img :src="diliverImg" />
       </div>
       <div class="subtitle-container">
-        <div class="head-container">
-          <div class="subtitle-name">{{ productsConfig.subTitle }}</div>
-          <div class="subtitle-content">{{ productsConfig.subIntroduce }}</div>
-        </div>
-        <div class="sub-feature-list-container">
-          <div
-            class="sub-feature-item"
-            v-for="(item, index) in productsConfig.subFeatureTxts"
-            :key="item.title"
-          >
-            <div class="sub-feature-img">
-              <img :src="subFeatureImgList[index]" />
+        <div id="center-page" style="position: relative">
+          <div class="head-container">
+            <div class="subtitle-name">{{ productsConfig.subTitle }}</div>
+            <div class="subtitle-content">
+              {{ productsConfig.subIntroduce }}
             </div>
-            <div class="card-container">
-              <div class="item-title">{{ item.title }}</div>
-              <div class="item-content">{{ item.content }}</div>
+          </div>
+          <div class="sub-feature-list-container">
+            <div
+              class="sub-feature-item"
+              v-for="(item, index) in productsConfig.subFeatureTxts"
+              :key="item.title"
+            >
+              <div class="sub-feature-img">
+                <img :src="subFeatureImgList[index]" />
+              </div>
+              <div class="card-container">
+                <div class="item-title">{{ item.title }}</div>
+                <div class="item-content">{{ item.content }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-feature-list-container">
+            <div
+              class="sub-feature-item"
+              v-for="(item, index) in productsConfig.subFeatureTxts2"
+              :key="item.title"
+            >
+              <div class="sub-feature-img">
+                <img :src="subFeatureImgList2[index]" />
+              </div>
+              <div class="card-container">
+                <div class="item-title">{{ item.title }}</div>
+                <div class="item-content">{{ item.content }}</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="case-container">
+      <div id="center-page">
+      
       <div class="case-title">{{ productsConfig.casesTitle }}</div>
       <div class="case-content">{{ productsConfig.casesIntroduce }}</div>
       <div class="case-list-container">
@@ -77,6 +101,7 @@
           </div>
         </article>
       </div>
+      </div>
     </div>
   </article>
 </template>
@@ -100,7 +125,12 @@ export default {
       subFeatureImgList: [
         require("@/assets/product_sub_1.png"),
         require("@/assets/product_sub_2.png"),
-        require("@/assets/product_sub_3.png")
+        require("@/assets/product_sub_3.png"),
+      ],
+      subFeatureImgList2: [
+        require("@/assets/product_sub_4.png"),
+        require("@/assets/product_sub_5.png"),
+        require("@/assets/product_sub_6.png"),
       ],
       detaiImg: [
         require("@/assets/iot.png"),
@@ -142,32 +172,41 @@ export default {
   }
 
   .title-container {
-    padding-top: 180px;
+    padding-top: 100px;
     position: relative;
     .title-name {
-      margin-left: 239px;
+      margin-left: 169px;
       color: #fff;
-      font-size: 62px;
+      font-size: 68px;
+      font-family: "AvenirNext-DemiBold";
     }
     .title-content {
-      font-size: 32px;
+      font-size: 22px;
       color: #fff;
-      margin-left: 239px;
-      width: 553px;
-      margin-top: 60px;
+      margin-left: 169px;
+      width: 500px;
+      margin-top: 42px;
+      font-family: "AvenirNext-DemiBold";
+    }
+    .title-sub-content {
+      color: #959bb3;
+      margin-left: 169px;
+      width: 447px;
+      margin-top: 20px;
+      font-size: 18px;
     }
     .feature-list-container {
       height: 200px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 30px 300px;
+      margin: 80px 250px;
+      margin-bottom: 0;
       .feature-item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        width: 300px;
         .feature-img {
           width: 80px;
           height: 80px;
@@ -189,27 +228,26 @@ export default {
       position: absolute;
       width: 614px;
       height: 569px;
-      top: -80px;
-      right: 5%;
+      top: -200px;
+      right: -30px;
       z-index: 1;
     }
   }
   .diliver-container {
-    height: 300px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .subtitle-container {
-    height: 800px;
-    // background: #212844;
-
+    height:1200px;
     .head-container {
       height: 143px;
       text-align: center;
       .subtitle-name {
         font-size: 32px;
         color: #fff;
+        font-family: "AvenirNext-DemiBold";
       }
       .subtitle-content {
         margin-top: 30px;
@@ -219,21 +257,21 @@ export default {
       }
     }
     .sub-feature-list-container {
-      height: 657px;
+      height: 500px;
       display: flex;
-      margin: 0 150px;
       justify-content: space-between;
+      margin:0 100px;
       .sub-feature-item {
-        position:relative;
-        .sub-feature-img{
-          position:absolute;
-          left:50%;
-          transform:translateX(-50%);
-          top:55px;
+        position: relative;
+        .sub-feature-img {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 55px;
         }
         .card-container {
-          margin-top:150px;
-          padding-top:80px;
+          margin-top: 150px;
+          padding-top: 80px;
           background: url("@/assets/product_card.png");
           background-size: 100% 100%;
           height: 300px;
@@ -242,13 +280,15 @@ export default {
             font-size: 20px;
             color: #fff;
             text-align: center;
+            line-height:27px;
           }
           .item-content {
             margin-top: 18px;
             font-size: 18px;
+            line-height:22px;
             color: #959bb3;
             text-align: center;
-            font-family: "PingFangRegular";
+            font-family: "AvenirNext-Regular";
           }
         }
       }
@@ -263,6 +303,7 @@ export default {
       line-height: 47px;
       font-size: 32px;
       color: #000;
+      font-family: "AvenirNext-DemiBold";
       text-align: center;
     }
     .case-content {
@@ -298,7 +339,7 @@ export default {
     .case-detail {
       display: flex;
       width: 100%;
-      height: 900px;
+      padding-bottom: 400px;
       // background: linear-gradient(to right, #1c1837, #2f1f3f);
       z-index: -1;
       .detail-img {
