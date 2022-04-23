@@ -16,3 +16,14 @@
     font-family: 'AvenirNext-Regular';
     src: url('Avenir-Regular.ttf');
 }
+
+@font-face {
+    font-family: 'AvenirNext-DemiBold';
+    src: url('Avenir-DemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'AvenirNext-Bold';
+    src: url('Avenir-Bold.ttf');
+}
+

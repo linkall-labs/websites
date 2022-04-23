@@ -1,6 +1,8 @@
 <template>
   <article class="footer-container">
-    <section class="footer-top">
+    
+      <!-- <section class="footer-top">
+        <div id="center-page">
       <div class="title">
         <span style="color: #7762ed">Subscribe </span>
         {{ footerConfig.title }}
@@ -15,10 +17,13 @@
         <div class="op-btn" style="margin-left:20px;">Sending...</div>
       </div>
       <div class="content-2">{{ footerConfig.content2 }}</div>
-    </section>
+       </div>
+    </section> -->
     <section class="footer-bottom">
       {{ footerConfig.bottomTxt }}
     </section>
+   
+    
   </article>
 </template>
 
@@ -36,7 +41,7 @@ export default {
 
 <style lang="less">
 .footer-container {
-  height: 508px;
+  // height: 508px;
   .footer-top {
     padding: 83px 200px 67px 200px;
     height: 425px;

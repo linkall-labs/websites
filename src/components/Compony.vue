@@ -1,20 +1,25 @@
 <template>
   <article class="compony-page-container">
     <div class="title-container">
-      <Navigation
-      :menuList="menuList"
-    />
-      <div class="title-name">{{ componyConfig.title }}</div>
-      <div class="title-content">{{ componyConfig.introduce }}</div>
+      <Navigation :menuList="menuList" />
+      <div id="center-page" class="title-box">
+        <img class="bg-layer" :src="bgImage">
+        <div class="content-layer">
+          <div class="title-name">{{ componyConfig.title }}</div>
+          <div class="title-content">{{ componyConfig.introduce }}</div>
+        </div>
+        
+      </div>
     </div>
     <div class="compony-introduce-container">
-      <div
+      <div id="center-page">
+         <div
         class="introduce-item"
-        v-for="(item,index) in componyConfig.componyIndroduceList"
+        v-for="(item, index) in componyConfig.componyIndroduceList"
         :key="item.title"
       >
         <div class="introduce-image">
-          <img :src="introduceImgList[index]"/>
+          <img :src="introduceImgList[index]" />
         </div>
         <div class="introduce-page">
           <div class="introduce-title">{{ item.title }}</div>
@@ -22,9 +27,13 @@
           <div class="introduce-content">{{ item.content }}</div>
         </div>
       </div>
+      </div>
+     
     </div>
     <div class="career-container">
-      <div class="career-theme">{{ componyConfig.careersTheme }}</div>
+      <div id="center-page">
+        <div class="career-box">
+          <div class="career-theme">{{ componyConfig.careersTheme }}</div>
       <div class="career-page">
         <div class="career-article">
           <div class="title">{{ componyConfig.careersTitle }}</div>
@@ -34,7 +43,9 @@
           <img :src="photoWallImg" />
         </div>
       </div>
-      <div class="position-container">
+        </div>
+      
+      <!-- <div class="position-container">
         <div class="position-title">{{ componyConfig.positionsTitle }}</div>
         <div
           :class="['position-item', { 'cur-item': index === curIndex }]"
@@ -68,9 +79,10 @@
             </div>
           </div>
         </div>
+      </div> -->
       </div>
     </div>
-    <div class="contact-us-container">
+    <!-- <div class="contact-us-container">
       <div class="top-page"></div>
       <div class="bottom-page"></div>
       <div class="contact-us-page">
@@ -93,16 +105,16 @@
           </el-row>
         </el-form>
       </div>
-    </div>
+    </div> -->
   </article>
 </template>
 
 <script>
 import componyConfig from "@/config/compony";
-import Navigation from '@/components/Navigation.vue'
+import Navigation from "@/components/Navigation.vue";
 export default {
   name: "compony-page",
-  components:{
+  components: {
     Navigation,
   },
   data() {
@@ -118,20 +130,29 @@ export default {
         other: "",
       },
       curIndex: 0,
-      introduceImgList:[require('@/assets/compony_feature_1.png'),require('@/assets/compony_feature_2.png'),require('@/assets/compony_feature_3.png')],
-      photoWallImg:require('@/assets/photo_wall.png'),
-      positionImg1:require('@/assets/position_icon_1.png'),
-      positionImg2:require('@/assets/position_icon_2.png'),
-      menuList:[{
-        path:'/products',
-        name:'Products'
-      },{
-        path:'/open-source',
-        name:'Open-source'
-      },{
-        path:'/compony',
-        name:'Company'
-      }]
+      bgImage:require('@/assets/compony_bg_1_2.png'),
+      introduceImgList: [
+        require("@/assets/compony_feature_1.png"),
+        require("@/assets/compony_feature_2.png"),
+        require("@/assets/compony_feature_3.png"),
+      ],
+      photoWallImg: require("@/assets/photo_wall.png"),
+      positionImg1: require("@/assets/position_icon_1.png"),
+      positionImg2: require("@/assets/position_icon_2.png"),
+      menuList: [
+        {
+          path: "/products",
+          name: "Products",
+        },
+        {
+          path: "/open-source",
+          name: "Open Source",
+        },
+        {
+          path: "/compony",
+          name: "Company",
+        },
+      ],
     };
   },
 };
@@ -142,36 +163,51 @@ export default {
   .title-container {
     height: 553px;
     // background: linear-gradient(to right, #31395b, #17192e);
-    background:url('@/assets/compony_bg_1.png') no-repeat;
+    background: url("@/assets/compony_bg_1_1.png") no-repeat;
     background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .title-name {
-      font-size: 48px;
-      color: #fff;
-      margin-top: 54px;
+    
+    .title-box {
+      
+      position: relative;
+      .bg-layer{
+      position: absolute;
+      z-index:1;
+      right:100px;
     }
-    .title-content {
-      margin-top: 30px;
-      color: #b2c2ed;
-      font-size: 18px;
-      text-align: center;
-      line-height: 30px;
-      width: 614px;
+    .content-layer{
+      position: relative;
+      z-index:2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+      .title-name {
+        font-size: 48px;
+        color: #fff;
+        margin-top: 54px;
+      }
+      .title-content {
+        margin-top: 30px;
+        color: #b2c2ed;
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+        width: 590px;
+      }
     }
   }
   .compony-introduce-container {
     background: #fff;
-    margin-top:140px;
+    margin-top: 140px;
     .introduce-item {
       overflow: hidden;
-      margin:0 200px 90px 200px;
+      margin: 0 100px 90px 100px;
       .introduce-page {
         .introduce-title {
           color: #000;
           font-size: 36px;
           line-height: 61px;
+          font-family: 'AvenirNext-DemiBold';
         }
         .introduce-subtitle {
           color: #000;
@@ -185,16 +221,15 @@ export default {
           color: #7c7c7c;
           line-height: 22px;
           width: 472px;
+          font-family: 'AvenirNext-Regular'
         }
-      }
-      .introduce-image{
-        padding-left:40px;
       }
       &:nth-of-type(odd) {
         .introduce-image {
           float: left;
           width: 50%;
           height: 100%;
+          padding-left: 200px;
         }
         .introduce-page {
           float: left;
@@ -216,13 +251,17 @@ export default {
     }
   }
   .career-container {
-    height: 895px;
+    // height: 895px;
+    height:400px;
     margin-top: 90px;
-    margin:0 300px;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
+    .career-box{
+      margin:0 100px;
+    }
     .career-theme {
+      font-family: 'AvenirNext-DemiBold';
       font-size: 48px;
       color: #000;
       height: 66px;
@@ -234,12 +273,14 @@ export default {
       .career-article {
         width: 560px;
         .title {
+          font-family: 'AvenirNext-DemiBold';
           font-size: 36px;
           color: #000;
           height: 49px;
           line-height: 49px;
         }
         .content {
+          font-family: 'AvenirNext-Regular';
           margin-top: 14px;
           font-size: 20px;
           line-height: 24px;
@@ -247,12 +288,12 @@ export default {
         }
       }
       .career-image {
-        margin-left:30px;
-        flex:1
+        margin-left: 130px;
+        flex: 1;
       }
     }
     .position-container {
-      margin-top:60px;
+      margin-top: 60px;
       .position-title {
         font-size: 24px;
         color: #000;
@@ -273,32 +314,31 @@ export default {
           color: #000;
         }
       }
-      .position-introduce{
+      .position-introduce {
         display: flex;
-        margin-top:43px;
-        .image-module{
-          padding-left:50px;
-            width:90px;
-          }
-          .article-page{
-            .title{
-              font-size:22px;
-              color:#000;
-              line-height:30px;
-            }
-            .content{
-              font-size:18px;
-              color:#4D4D4D;
-              line-height:22px;
-            }
-          }
-        .left-module{
-          flex:1;
-          display: flex;
-          
+        margin-top: 43px;
+        .image-module {
+          padding-left: 50px;
+          width: 90px;
         }
-        .right-module{
-          flex:1
+        .article-page {
+          .title {
+            font-size: 22px;
+            color: #000;
+            line-height: 30px;
+          }
+          .content {
+            font-size: 18px;
+            color: #4d4d4d;
+            line-height: 22px;
+          }
+        }
+        .left-module {
+          flex: 1;
+          display: flex;
+        }
+        .right-module {
+          flex: 1;
         }
       }
     }
