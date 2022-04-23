@@ -1,7 +1,8 @@
 <template>
   <div class="outer-container">
     <div id="center-page" :class="['navigation-container',{'white-theme':isWhiteTheme}]">
-      <div class="logo-container">Linkall</div>
+      <div class="logo-container" @click="handleLogoClick">
+        <img :src="logoImg">Linkall</div>
     <el-menu :router="true" mode="horizontal" :default-active="$route.path">
       <el-menu-item
         v-for="menuItem in menuList"
@@ -36,12 +37,17 @@ export default {
     lang:'en',
     githubImg:require('@/assets/github.png'),
     githubImgBlack:require('@/assets/github-black.png'),
+    logoImg:require('@/assets/logo.png')
     };
   },
   computed:{
     isWhiteTheme(){
       return this.$route.path === '/open-source'
     }
+  },
+  methods:{},
+  handleLogoClick(){
+    this.$router.push('/products')
   }
 };
 </script>
@@ -50,6 +56,8 @@ export default {
 .outer-container{
   height:167px;
     width:100%;
+        z-index: 99;
+    position: relative;
 }
 .navigation-container{
     display: flex;
@@ -57,15 +65,24 @@ export default {
     height:167px;
     width:100%;
     .logo-container{
-        width:30%;
-        color: #DBE1F8;
-        font-size:20px;
-        line-height:32px;
-        font-family: 'PingFangMedium';
-        text-align: center;
+        width:34.5%;
+        color: #fff;
+        font-size:30px;
+        line-height:41px;
+        font-family: 'AvenirNext-DemiBold';
+        // text-align: center;
+        display: flex;
+        align-items: center;
+        padding-left:240px;
+        img{
+          margin-right:11px;
+          width:46px;
+          height:42px;
+          margin-top:-10px;
+        }
     }
     .el-menu{
-      width:50%;
+      width:50.5%;
       // background-color:#212844;
       background: rgba(0,0,0,0);
       &.el-menu--horizontal{
@@ -75,6 +92,7 @@ export default {
           font-size:18px;
           line-height:32px;
           height:32px;
+          font-family: 'AvenirNext-DemiBold';
           &:hover{
             background: rgba(0,0,0,0);
             color:#fff;

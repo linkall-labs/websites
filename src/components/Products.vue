@@ -145,7 +145,7 @@ export default {
         },
         {
           path: "/open-source",
-          name: "Open-source",
+          name: "Open Source",
         },
         {
           path: "/compony",
@@ -198,7 +198,7 @@ export default {
     .feature-list-container {
       height: 200px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       margin: 80px 250px;
       margin-bottom: 0;
@@ -207,6 +207,7 @@ export default {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        width:250px;
         .feature-img {
           width: 80px;
           height: 80px;
@@ -229,7 +230,7 @@ export default {
       width: 614px;
       height: 569px;
       top: -200px;
-      right: -30px;
+      right: 30px;
       z-index: 1;
     }
   }
@@ -257,7 +258,7 @@ export default {
       }
     }
     .sub-feature-list-container {
-      height: 500px;
+      height: 462.5px;
       display: flex;
       justify-content: space-between;
       margin:0 100px;
@@ -325,6 +326,8 @@ export default {
         border: 3px solid rgba(0, 0, 0, 0);
         padding: 3px 20px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
         &:hover {
           border: 3px solid rgba(119, 98, 237, 1);
           border-radius: 20px;
@@ -333,6 +336,9 @@ export default {
           background: rgba(119, 98, 237, 1);
           color: #fff;
           border-radius: 20px;
+          &:hover{
+            border: 3px solid #B6A9FF;
+          }
         }
       }
     }
@@ -358,10 +364,12 @@ export default {
           margin-bottom: 45px;
         }
         .content {
+          width:536px;
           line-height: 30px;
-          font-size: 24px;
+          font-size: 22px;
           color: #5d6d7e;
           margin-bottom: 40px;
+          // font-family: 'AvenirNext-Regular';
         }
       }
     }
