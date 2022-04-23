@@ -1,6 +1,7 @@
 <template>
-  <div :class="['navigation-container',{'white-theme':isWhiteTheme}]">
-    <div class="logo-container">Linkall</div>
+  <div class="outer-container">
+    <div id="center-page" :class="['navigation-container',{'white-theme':isWhiteTheme}]">
+      <div class="logo-container">Linkall</div>
     <el-menu :router="true" mode="horizontal" :default-active="$route.path">
       <el-menu-item
         v-for="menuItem in menuList"
@@ -8,10 +9,13 @@
         :index="menuItem.path"
         >{{ menuItem.name }}</el-menu-item
       >
-      <img :src="isWhiteTheme?githubImgBlack:githubImg"/>
+      
     </el-menu>
-    <i class="el-icon-arrow-down arrow-icon"></i>
-    <div class="lang">English</div>
+    <img :src="isWhiteTheme?githubImgBlack:githubImg"/>
+    </div>
+    
+    <!-- <i class="el-icon-arrow-down arrow-icon"></i>
+    <div class="lang">English</div> -->
     <!-- <el-select v-model="lang">
         <el-option label="English" value="en"></el-option>
     </el-select> -->
@@ -43,11 +47,13 @@ export default {
 </script>
 
 <style lang="less">
+.outer-container{
+  height:167px;
+    width:100%;
+}
 .navigation-container{
     display: flex;
     align-items: center;
-    // background: #212844;
-    // background: linear-gradient(to right, #31395b, #17192e);
     height:167px;
     width:100%;
     .logo-container{
@@ -98,6 +104,10 @@ export default {
     }
     &.white-theme{
       background: rgba(0,0,0,0);
+      .logo-container{
+        color:#5F5F5F;
+      }
+      
       .el-menu{
         background: rgba(0,0,0,0);
         &.el-menu--horizontal{

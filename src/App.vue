@@ -30,6 +30,11 @@ export default {
   box-sizing: border-box;
 }
 body{
-  min-width:1200px;
+  min-width:1280px;
+}
+
+#center-page{
+  width:1280px;
+  margin:0 auto;
 }
 </style>

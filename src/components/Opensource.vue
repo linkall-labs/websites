@@ -1,48 +1,50 @@
 <template>
   <article class="opensource-page-content">
     <div class="header-contaienr">
-      <Navigation
-      :menuList="menuList"
-    />
-      <div class="title-container">
-        <div class="title-img">
-          <img :src="titleImg" />
-        </div>
-        <div>
-          <div class="title-name">{{ openSourceConfig.title }}</div>
-          <div class="title-content">{{ openSourceConfig.introduce }}</div>
-          <div class="title-content-2">{{ openSourceConfig.introduce2 }}</div>
-        </div>
-      </div>
-      <div class="subtitle-container">
-        <div class="left-module"></div>
-        <div class="right-module">
-          <div class="subtitle-name">{{ openSourceConfig.subTitle }}</div>
-          <div class="subtitle-content">
-            {{ openSourceConfig.subIntroduce }}
+      <Navigation :menuList="menuList" />
+      <div id="center-page">
+        <div class="title-container">
+          <div class="title-img">
+            <img :src="titleImg" />
           </div>
-          <div class="github-btn" @click="$_gotoGithub">
-            <img :src="githubImg"/>
-            <div class="txt">GitHub</div>
+          <div>
+            <div class="title-name">{{ openSourceConfig.title }}</div>
+            <div class="title-content">{{ openSourceConfig.introduce }}</div>
+            <div class="title-content-2">{{ openSourceConfig.introduce2 }}</div>
+          </div>
+        </div>
+        <div class="subtitle-container">
+          <div class="left-module"></div>
+          <div class="right-module">
+            <div class="subtitle-name">{{ openSourceConfig.subTitle }}</div>
+            <div class="subtitle-content">
+              {{ openSourceConfig.subIntroduce }}
+            </div>
+            <div class="github-btn" @click="$_gotoGithub">
+              <img :src="githubImg" />
+              <div class="txt">GitHub</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="learn-container">
-      <div class="learn-title">{{ openSourceConfig.learnTitle }}</div>
-      <div class="learn-list-container">
-        <div
-          v-for="(item, index) in openSourceConfig.blogList"
-          :key="index"
-          class="item-container"
-        >
-          <div class="blog-img">
-            <img :src="learnImg1"/>
-          </div>
-          <div class="blog-title">{{ item.title }}</div>
-          <div class="blog-content">{{ item.content }}</div>
-          <div class="link" @click="$_gotoLink(item)">
-            {{ item.linkTitle }}
+      <div id="center-page">
+        <div class="learn-title">{{ openSourceConfig.learnTitle }}</div>
+        <div class="learn-list-container">
+          <div
+            v-for="(item, index) in openSourceConfig.blogList"
+            :key="index"
+            class="item-container"
+          >
+            <div class="blog-img">
+              <img :src="learnImg1" />
+            </div>
+            <div class="blog-title">{{ item.title }}</div>
+            <div class="blog-content">{{ item.content }}</div>
+            <div class="link" @click="$_gotoLink(item)">
+              {{ item.linkTitle }}
+            </div>
           </div>
         </div>
       </div>
@@ -51,11 +53,12 @@
       <div class="concat-us-card">
         <div class="concat-title">{{ openSourceConfig.concatTitle }}</div>
         <div class="concat-detail">
-          <div class="phone-item">
-            <img :src="phoneImg"/>
-            <div class="txt">{{ openSourceConfig.concatPhone }}</div></div>
+          <!-- <div class="phone-item">
+            <img :src="phoneImg" />
+            <div class="txt">{{ openSourceConfig.concatPhone }}</div>
+          </div> -->
           <div class="email-item">
-            <img :src="emailImg"/>
+            <img :src="emailImg" />
             <div class="txt">{{ openSourceConfig.concatEmail }}</div>
           </div>
         </div>
@@ -66,30 +69,34 @@
 
 <script>
 import openSourceConfig from "@/config/opensource";
-import Navigation from '@/components/Navigation.vue'
+import Navigation from "@/components/Navigation.vue";
 export default {
   name: "open-source",
-  components:{
+  components: {
     Navigation,
   },
   data() {
     return {
       openSourceConfig,
-      titleImg:require('@/assets/opensource_title.png'),
-      githubImg:require('@/assets/github.png'),
-      learnImg1:require('@/assets/learn_img_1.png'),
-      phoneImg:require('@/assets/phone.png'),
-      emailImg:require('@/assets/email.png'),
-      menuList:[{
-        path:'/products',
-        name:'Products'
-      },{
-        path:'/open-source',
-        name:'Open-source'
-      },{
-        path:'/compony',
-        name:'Company'
-      }]
+      titleImg: require("@/assets/opensource_title.png"),
+      githubImg: require("@/assets/github.png"),
+      learnImg1: require("@/assets/learn_img_1.png"),
+      phoneImg: require("@/assets/phone.png"),
+      emailImg: require("@/assets/email.png"),
+      menuList: [
+        {
+          path: "/products",
+          name: "Products",
+        },
+        {
+          path: "/open-source",
+          name: "Open-source",
+        },
+        {
+          path: "/compony",
+          name: "Company",
+        },
+      ],
     };
   },
   methods: {
@@ -106,23 +113,25 @@ export default {
 <style lang="less">
 .opensource-page-content {
   .header-contaienr {
-    background: url('@/assets/opensource_bg_1.png') no-repeat;
+    background: url("@/assets/opensource_bg_1.png") no-repeat;
     background-size: 100% 100%;
     .title-container {
       display: flex;
       height: 370px;
+      padding-top: 80px;
       .title-img {
-        flex-basis: 300px;
-        img{
-          float:right;
-          margin-right:41px;
-          margin-top:20px;
+        flex-basis: 250px;
+        img {
+          float: right;
+          margin-right: 41px;
+          margin-top: 20px;
         }
       }
       .title-name {
         font-size: 48px;
         height: 77px;
         line-height: 77px;
+        font-family: "AvenirNext-DemiBold";
       }
       .title-content {
         font-size: 24px;
@@ -146,8 +155,8 @@ export default {
       }
       .right-module {
         flex: 1;
-        padding-top:120px;
-        padding-left:180px;
+        padding-top: 120px;
+        padding-left: 180px;
         .subtitle-name {
           font-size: 36px;
           height: 49px;
@@ -158,21 +167,22 @@ export default {
           height: 27px;
           line-height: 27px;
           color: #6e6e6e;
+          margin-top: 7px;
         }
-        .github-btn{
-          margin-top:42px;
-          width:120px;
-          height:32px;
-          border-radius:16px;
+        .github-btn {
+          margin-top: 42px;
+          width: 120px;
+          height: 32px;
+          border-radius: 16px;
           background: #000;
           display: flex;
           align-items: center;
-          padding:3px 5px;
-          .txt{
-            font-size:18px;
-            color:#fff;
-            line-height:25px;
-            margin-left:9px;
+          padding: 3px 5px;
+          .txt {
+            font-size: 18px;
+            color: #fff;
+            line-height: 25px;
+            margin-left: 9px;
           }
         }
       }
@@ -187,11 +197,11 @@ export default {
       color: #000;
       height: 49px;
       line-height: 49px;
-      margin-bottom:60px;
+      margin-bottom: 60px;
     }
     .learn-list-container {
       display: flex;
-      margin: 0 130px;
+      margin: 0 100px;
       justify-content: space-around;
       .item-container {
         background: #ffffff;
@@ -235,47 +245,48 @@ export default {
     height: 239px;
     display: flex;
     justify-content: center;
-    margin-bottom:100px;
+    margin-bottom: 100px;
     .concat-us-card {
       width: 944px;
       height: 229px;
-      background: url('@/assets/opensource_bg_2.png');
+      background: url("@/assets/opensource_bg_2.png");
 
       display: flex;
-      border-radius:10px;
+      border-radius: 10px;
       .concat-title {
         flex: 1;
-        font-size:42px;
-        color:#fff;
-        height:56px;
-        line-height:56px;
-        margin-top:69px;
-        margin-left:104px;
+        font-size: 42px;
+        color: #fff;
+        height: 56px;
+        line-height: 56px;
+        margin-top: 69px;
+        margin-left: 104px;
+        font-family: 'AvenirNext-Bold';
       }
       .concat-detail {
         flex: 1;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        font-family: 'AvenirNext-DemiBold';
 
-        img{
-           margin-right:20px; 
-          }
-          .txt{
-            color:#fff;
-            font-size:24px;
-            line-height:24px;
-          }
-        .phone-item{
-          display: flex;
-          align-items: center;
-          height:40px;
-          
+        img {
+          margin-right: 20px;
         }
-        .email-item{
+        .txt {
+          color: #fff;
+          font-size: 24px;
+          line-height: 24px;
+        }
+        .phone-item {
           display: flex;
           align-items: center;
-          height:40px;
+          height: 40px;
+        }
+        .email-item {
+          display: flex;
+          align-items: center;
+          height: 40px;
         }
       }
     }

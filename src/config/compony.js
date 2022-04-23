@@ -1,5 +1,5 @@
 const componyConfig = {
-    title:'Explore the best practice on Serverless',
+    title:'Explore the best practice in Serverless',
     introduce:`Vanus is building event-oriented middleware for the serverless era.Let's take an adventure on Serverless journey together`,
     componyIndroduceList:[{
         title:'Mission',
