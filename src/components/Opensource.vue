@@ -8,10 +8,6 @@
             <div class="title-name">{{ openSourceConfig.title }}</div>
             <div class="title-content">{{ openSourceConfig.introduce }}</div>
             <div class="title-content-2">{{ openSourceConfig.introduce2 }}</div>
-            <div class="github-btn" @click="$_gotoGithub">
-              <img :src="githubImg" />
-              <div class="txt">GitHub</div>
-            </div>
           </div>
         </div>
         <div class="subtitle-container">
@@ -25,6 +21,10 @@
             <div class="subtitle-content">
               {{ openSourceConfig.subIntroduce }}
             </div>
+            <!-- <div class="github-btn" @click="$_gotoGithub">
+              <img :src="githubImg" />
+              <div class="txt">GitHub</div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
     <div class="diliver-container">
         <img :src="diliverImg" />
       </div>
-    <div class="learn-container">
+    <!-- <div class="learn-container">
       <div id="center-page">
         <div class="learn-title">{{ openSourceConfig.learnTitle }}</div>
         <div class="learn-list-container">
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="card-container">
       <div class="concat-us-card">
         <div class="concat-title">{{ openSourceConfig.concatTitle }}</div>
@@ -95,7 +95,7 @@ export default {
         },
         {
           path: "/open-source",
-          name: "Open Source",
+          name: "Open source",
         },
         {
           path: "/compony",
@@ -145,6 +145,11 @@ export default {
         height: 27px;
         line-height: 27px;
       }
+      
+    }
+    .subtitle-container {
+      display: flex;
+      height: 300px;
       .github-btn {
           margin-top: 54px;
           width: 155px;
@@ -165,10 +170,6 @@ export default {
             margin-left: 20px;
           }
         }
-    }
-    .subtitle-container {
-      display: flex;
-      height: 300px;
       .left-module {
         flex: 1;
       }
@@ -208,7 +209,8 @@ export default {
     }
   }
   .diliver-container {
-    margin-top:40px;
+    // margin-top:40px;
+    margin-top:20px;
     height: 60px;
     display: flex;
     align-items: center;

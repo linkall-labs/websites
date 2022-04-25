@@ -17,7 +17,7 @@ const componyConfig = {
     }],
     careersTheme:'Careers',
     careersTitle:'Work at Linkall',
-    careersIntroduce:'We are a global team with extensive experience in cloud and cloud native computing, Kubernetes, Knative, and DevOps. Ready to join? Check out our open positions below!',
+    careersIntroduce:'We are a global team with extensive experience in cloud and cloud native computing, Kubernetes, Knative, and DevOps.',
     positionsTitle:'Hot Positions',
     positionsList:[{
         name:'Software Engineer',

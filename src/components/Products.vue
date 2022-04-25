@@ -94,9 +94,10 @@
           </div>
           <div
             class="content"
-            v-for="content in productsConfig.casesList[caseIndex].content"
+            v-for="(content,index) in productsConfig.casesList[caseIndex].content"
             :key="content.slice(0, 10)"
           >
+            <span v-if="index===0" class="article-first-word">{{productsConfig.casesList[caseIndex].firstWord}} </span>
             {{ content }}
           </div>
         </article>
@@ -145,7 +146,7 @@ export default {
         },
         {
           path: "/open-source",
-          name: "Open Source",
+          name: "Open source",
         },
         {
           path: "/compony",
@@ -241,7 +242,7 @@ export default {
     justify-content: center;
   }
   .subtitle-container {
-    height:1200px;
+    height:1080px;
     .head-container {
       height: 143px;
       text-align: center;
@@ -258,20 +259,25 @@ export default {
       }
     }
     .sub-feature-list-container {
-      height: 462.5px;
+      height: 412.5px;
       display: flex;
       justify-content: space-between;
       margin:0 100px;
       .sub-feature-item {
         position: relative;
         .sub-feature-img {
+          
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          top: 55px;
+          top: 39px;
+          img{
+            width:245px;
+          height:151px;
+          }
         }
         .card-container {
-          margin-top: 150px;
+          margin-top: 114.5px;
           padding-top: 80px;
           background: url("@/assets/product_card.png");
           background-size: 100% 100%;
@@ -299,6 +305,7 @@ export default {
     padding-top: 50px;
     background: url("@/assets/product_bg_3.png") no-repeat;
     background-size: 100% 100%;
+    height:1400px;
     .case-title {
       height: 47px;
       line-height: 47px;
@@ -338,6 +345,7 @@ export default {
           border-radius: 20px;
           &:hover{
             border: 3px solid #B6A9FF;
+            background:#B6A9FF
           }
         }
       }
@@ -369,7 +377,12 @@ export default {
           font-size: 22px;
           color: #5d6d7e;
           margin-bottom: 40px;
-          // font-family: 'AvenirNext-Regular';
+          .article-first-word{
+            color: #7762ED;
+            font-size:32px;
+            line-height:30px;
+          }
+          font-family: 'AvenirNext-Regular';
         }
       }
     }

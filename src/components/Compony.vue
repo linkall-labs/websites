@@ -146,7 +146,7 @@ export default {
         },
         {
           path: "/open-source",
-          name: "Open Source",
+          name: "Open source",
         },
         {
           path: "/compony",
