@@ -3,8 +3,12 @@
     <div class="title-container">
       <Navigation :menuList="menuList" />
       <div id="center-page" class="title-box">
-        <div class="title-name">{{ componyConfig.title }}</div>
-        <div class="title-content">{{ componyConfig.introduce }}</div>
+        <img class="bg-layer" :src="bgImage">
+        <div class="content-layer">
+          <div class="title-name">{{ componyConfig.title }}</div>
+          <div class="title-content">{{ componyConfig.introduce }}</div>
+        </div>
+        
       </div>
     </div>
     <div class="compony-introduce-container">
@@ -126,6 +130,7 @@ export default {
         other: "",
       },
       curIndex: 0,
+      bgImage:require('@/assets/compony_bg_1_2.png'),
       introduceImgList: [
         require("@/assets/compony_feature_1.png"),
         require("@/assets/compony_feature_2.png"),
@@ -141,7 +146,7 @@ export default {
         },
         {
           path: "/open-source",
-          name: "Open-source",
+          name: "Open Source",
         },
         {
           path: "/compony",
@@ -158,12 +163,24 @@ export default {
   .title-container {
     height: 553px;
     // background: linear-gradient(to right, #31395b, #17192e);
-    background: url("@/assets/compony_bg_1.png") no-repeat;
+    background: url("@/assets/compony_bg_1_1.png") no-repeat;
     background-size: 100% 100%;
+    
     .title-box {
+      
+      position: relative;
+      .bg-layer{
+      position: absolute;
+      z-index:1;
+      right:100px;
+    }
+    .content-layer{
+      position: relative;
+      z-index:2;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
       .title-name {
         font-size: 48px;
         color: #fff;
@@ -175,7 +192,7 @@ export default {
         font-size: 18px;
         text-align: center;
         line-height: 30px;
-        width: 614px;
+        width: 590px;
       }
     }
   }
