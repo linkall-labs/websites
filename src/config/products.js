@@ -30,12 +30,14 @@ const productsConfig = {
     casesList: [{
         name: 'IoT',
         title: 'IoT',
-        content: ['The IoT networks connect massive devices and process enormous data in real time.  Data transmission stability and security are vital in IoT scenarios.',
+        firstWord:'The',
+        content: ['IoT networks connect massive devices and process enormous data in real time.  Data transmission stability and security are vital in IoT scenarios.',
             'Vanus is fully compatible with the MQTT protocol and supports various IoT communication protocols (CoAP/LwM2M). It adopts a high-availability distributed storage model, which ensures data transmission stability and security. The business logic/flow can be completed within just a few clicks by leveraging its powerful computation engine. ']
     }, {
         name: 'Data Integration',
         title: 'Data Integration',
-        content: ['Modern complex applications have a variety of data transfer sources and destinations. It is expensive to use resources continuously. Besides, there is a lack of monitoring mechanisms during the synchronization process.',
+        firstWord:'Modern',
+        content: ['complex applications have a variety of data transfer sources and destinations. It is expensive to use resources continuously. Besides, there is a lack of monitoring mechanisms during the synchronization process.',
             'Vanus enables enterprises to simplify data integration complexity.  Presetting plentiful sources/sinks and providing rich open-source development templates,  Vanus allows users to tackle business with low code.',
             'Vanus extensively reduce resource consumption in a Serverless operation mode;  meanwhile, the entire link is observable,  empowering users to learn the transmission health status in real-time.']
     }]
