@@ -11,7 +11,7 @@ const componyConfig = {
         content:''
     },{
         title:'Value',
-        subtitle:'Open Source and vendor-neutrality Serverless technology provider',
+        subtitle:'Open source and vendor-neutrality Serverless technology provider',
         content:''
         // content:'Easy to obtain data changes in various applications such as cloud manufacturers, own applications, and SaaS Make it easy for you to build SaaS application integration solutions Makes it easier for you to develop EDA-based applications'
     }],

@@ -2,12 +2,12 @@ const productsConfig = {
     title: 'Vanus',
     introduce: 'Serverless event platform for easily building Event-Driven Architecture(EDA) applications. ',
     introduce2:'Vanus provides enterprises and organizations an innovative platform  for collecting, storing, distributing, and processing events at scale.',
-    featureTxts: ['Serverless', 'Open-Source', 'Eventing Platform'],
+    featureTxts: ['Serverless', 'Open Source', 'Eventing Platform'],
     subTitle: 'Connect the Future of Cloud Computing  with Vanus',
     subIntroduce: 'The future of Cloud Computing is Serverless. Vanus is the best event platform for the Serverless era. ',
     subFeatureTxts: [{
         title: 'Standards-based',
-        content: 'Implement CloudEvents standards, and embrace an open-source ecosystem.'
+        content: 'Implement CloudEvents standards, and embrace an open source ecosystem.'
     }, {
         title: 'Global routing',
         content: 'Build event platforms globally for hybrid and multi-cloud',
@@ -26,7 +26,7 @@ const productsConfig = {
         content: 'The entire link is observable and traceable.Support event search, replay, and retry configuration.'
     }],
     casesTitle: 'Popular Use Cases',
-    casesIntroduce: 'Explore some popular cases here',
+    casesIntroduce: 'Explore some popular use cases.',
     casesList: [{
         name: 'IoT',
         title: 'IoT',
@@ -38,7 +38,7 @@ const productsConfig = {
         title: 'Data Integration',
         firstWord:'Modern',
         content: ['complex applications have a variety of data transfer sources and destinations. It is expensive to use resources continuously. Besides, there is a lack of monitoring mechanisms during the synchronization process.',
-            'Vanus enables enterprises to simplify data integration complexity.  Presetting plentiful sources/sinks and providing rich open-source development templates,  Vanus allows users to tackle business with low code.',
+            'Vanus enables enterprises to simplify data integration complexity.  Presetting plentiful sources/sinks and providing rich open source development templates,  Vanus allows users to tackle business with low code.',
             'Vanus extensively reduce resource consumption in a Serverless operation mode;  meanwhile, the entire link is observable,  empowering users to learn the transmission health status in real-time.']
     }]
 }

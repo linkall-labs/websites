@@ -2,7 +2,8 @@
   <article class="opensource-page-content">
     <div class="header-contaienr">
       <Navigation :menuList="menuList" />
-      <div id="center-page">
+      <div id="center-page" class="center-box">
+        <img :src="componyHeadBgImg" class="head-bg-img"/>
         <div class="title-container">
           <div>
             <div class="title-name">{{ openSourceConfig.title }}</div>
@@ -82,6 +83,7 @@ export default {
   data() {
     return {
       openSourceConfig,
+      componyHeadBgImg:require('@/assets/opensource_bg_1_2.png'),
       findUsImg:require('@/assets/opensource_find_us.png'),
       githubImg: require("@/assets/github.png"),
       learnImg1: require("@/assets/learn_img_1.png"),
@@ -120,11 +122,22 @@ export default {
   .header-contaienr {
     background: url("@/assets/opensource_bg_1.png") no-repeat;
     background-size: 100% 100%;
+    .center-box{
+      position: relative;
+      .head-bg-img{
+        position: absolute;
+        top:0;
+        left:82px;
+        z-index:0;
+      }
+    }
     .title-container {
       display: flex;
       height: 370px;
       padding-top: 80px;
       margin-left:300px;
+      position: relative;
+      z-index:1;
       .title-name {
         font-size: 48px;
         height: 77px;

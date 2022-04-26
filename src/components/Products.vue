@@ -290,12 +290,14 @@ export default {
             line-height:27px;
           }
           .item-content {
+            margin:0 auto;
             margin-top: 18px;
             font-size: 18px;
             line-height:22px;
             color: #959bb3;
             text-align: center;
             font-family: "AvenirNext-Regular";
+            width:275px;
           }
         }
       }
@@ -345,7 +347,7 @@ export default {
           border-radius: 20px;
           &:hover{
             border: 3px solid #B6A9FF;
-            background:#B6A9FF
+            // background:#B6A9FF
           }
         }
       }

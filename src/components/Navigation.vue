@@ -103,7 +103,10 @@ export default {
         font-size: 18px;
         line-height: 32px;
         height: 32px;
-        font-family: "AvenirNext-DemiBold";
+        
+        &.is-active{
+          font-family: "AvenirNext-DemiBold";
+        }
         &:hover {
           background: rgba(0, 0, 0, 0);
           color: #fff;
@@ -134,7 +137,10 @@ export default {
   &.white-theme {
     background: rgba(0, 0, 0, 0);
     .logo-container {
-      color: #5f5f5f;
+      .logo-box{
+        color: #000000;
+      }
+      
     }
 
     .el-menu {
