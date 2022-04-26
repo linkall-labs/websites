@@ -347,7 +347,8 @@ export default {
           border-radius: 20px;
           &:hover{
             border: 3px solid #B6A9FF;
-            // background:#B6A9FF
+            background:#fff;
+            color: #5d6d7e;
           }
         }
       }
