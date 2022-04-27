@@ -37,6 +37,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    isWhiteTheme:{
+      type:Boolean,
+      default:false
+    }
   },
   data() {
     return {
@@ -46,11 +50,11 @@ export default {
       logoImg: require("@/assets/logo.png"),
     };
   },
-  computed: {
-    isWhiteTheme() {
-      return this.$route.path === "/open-source";
-    },
-  },
+  // computed: {
+  //   isWhiteTheme() {
+  //     return this.$route.path === "/community";
+  //   },
+  // },
   methods: {
     gotoGithub() {},
     handleLogoClick() {

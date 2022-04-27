@@ -1,6 +1,6 @@
 const componyConfig = {
     title:'Explore the best practice in Serverless',
-    introduce:`Vanus is building event-oriented middleware for the Serverless era. Let's take an adventure on Serverless journey together`,
+    introduce:`Vanus is building event-oriented middleware for the Serverless era Let's take an adventure on Serverless journey together`,
     componyIndroduceList:[{
         title:'Mission',
         subtitle:'Help every enterprise complete the Serverless transformation of enterprise applications in the cloud-native era',
@@ -17,7 +17,7 @@ const componyConfig = {
     }],
     careersTheme:'Careers',
     careersTitle:'Work at Linkall',
-    careersIntroduce:'We are a global team with extensive experience in cloud and cloud native computing, Kubernetes, Knative, and DevOps.',
+    careersIntroduce:'We are a global team with extensive experience in Cloud Computing, Kubernetes, Knative, DevOps, etc.',
     positionsTitle:'Hot Positions',
     positionsList:[{
         name:'Software Engineer',

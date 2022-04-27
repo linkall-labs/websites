@@ -1,7 +1,7 @@
 <template>
   <article class="opensource-page-content">
     <div class="header-contaienr">
-      <Navigation :menuList="menuList" />
+      <Navigation :menuList="menuList" :isWhiteTheme="true"/>
       <div id="center-page" class="center-box">
         <img :src="componyHeadBgImg" class="head-bg-img"/>
         <div class="title-container">
@@ -96,8 +96,8 @@ export default {
           name: "Products",
         },
         {
-          path: "/open-source",
-          name: "Open source",
+          path: "/community",
+          name: "Community",
         },
         {
           path: "/compony",

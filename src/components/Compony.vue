@@ -145,8 +145,8 @@ export default {
           name: "Products",
         },
         {
-          path: "/open-source",
-          name: "Open source",
+          path: "/community",
+          name: "Community",
         },
         {
           path: "/compony",

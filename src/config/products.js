@@ -1,6 +1,6 @@
 const productsConfig = {
     title: 'Vanus',
-    introduce: 'Serverless event platform for easily building Event-Driven Architecture(EDA) applications. ',
+    introduce: 'Serverless event platform for easily building Event-Driven Architecture (EDA) applications. ',
     introduce2:'Vanus provides enterprises and organizations an innovative platform  for collecting, storing, distributing, and processing events at scale.',
     featureTxts: ['Serverless', 'Open Source', 'Eventing Platform'],
     subTitle: 'Connect the Future of Cloud Computing  with Vanus',
@@ -23,7 +23,7 @@ const productsConfig = {
         content: 'With built-in Serverless workflow, users can easily build EDA applications.',
     }, {
         title: 'Observasity',
-        content: 'The entire link is observable and traceable.Support event search, replay, and retry configuration.'
+        content: 'The entire link is observable and traceable. Support event search, replay, and retry configuration.'
     }],
     casesTitle: 'Popular Use Cases',
     casesIntroduce: 'Explore some popular use cases.',
@@ -39,7 +39,7 @@ const productsConfig = {
         firstWord:'Modern',
         content: ['complex applications have a variety of data transfer sources and destinations. It is expensive to use resources continuously. Besides, there is a lack of monitoring mechanisms during the synchronization process.',
             'Vanus enables enterprises to simplify data integration complexity.  Presetting plentiful sources/sinks and providing rich open source development templates,  Vanus allows users to tackle business with low code.',
-            'Vanus extensively reduce resource consumption in a Serverless operation mode;  meanwhile, the entire link is observable,  empowering users to learn the transmission health status in real-time.']
+            'Vanus extensively reduce resource consumption in a Serverless operation mode;  meanwhile, the entire link is observable,  empowering users to learn the transmission health status in real time.']
     }]
 }
 

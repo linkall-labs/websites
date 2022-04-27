@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 const Products  = ()=>import('@/components/Products')
-const Opensource = ()=>import('@/components/Opensource')
+const Community = ()=>import('@/components/Community')
 const Compony = ()=>import('@/components/Compony')
 Vue.use(VueRouter)
 const routes = [{
@@ -12,9 +12,9 @@ const routes = [{
     name:Products.name,
     component:Products
 },{
-    path:'/open-source',
-    name:Opensource.name,
-    component:Opensource
+    path:'/community',
+    name:Community.name,
+    component:Community
 },{
     path:'/compony',
     name:Compony.name,
