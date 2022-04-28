@@ -9,7 +9,7 @@ const openSourceConfig = {
     blogList:[{title:'Blog',content:'Articles, announcements, news, updates and more.',linkTitle:'Learn More',linkUrl:''},
     {title:'Blog',content:'Articles, announcements, news, updates and more.',linkTitle:'Learn More',linkUrl:''},
     {title:'Blog',content:'Articles, announcements, news, updates and more.',linkTitle:'Learn More',linkUrl:''}],
-    concatTitle:'Concat Us',
+    concatTitle:'Contact Us',
     // concatPhone:'22222222',{title:'Blog',content:'Articles, announcements, news, updates and more.',linkTitle:'Learn More',linkUrl:''},
     // {title:'Blog',content:'Articles, announcements, news, updates and more.',linkTitle:'Learn More',linkUrl:''}
     concatEmail:'contact@linkall.com'

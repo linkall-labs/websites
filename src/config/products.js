@@ -2,7 +2,7 @@ const productsConfig = {
     title: 'Vanus',
     introduce: 'Serverless event platform for easily building Event-Driven Architecture (EDA) applications. ',
     introduce2:'Vanus provides enterprises and organizations an innovative platform  for collecting, storing, distributing, and processing events at scale.',
-    featureTxts: ['Serverless', 'Open Source', 'Eventing Platform'],
+    featureTxts: ['Serverless', 'Open Source', 'Event Platform'],
     subTitle: 'Connect the Future of Cloud Computing  with Vanus',
     subIntroduce: 'The future of Cloud Computing is Serverless. Vanus is the best event platform for the Serverless era. ',
     subFeatureTxts: [{
