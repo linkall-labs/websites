@@ -145,8 +145,8 @@ export default {
           name: "Products",
         },
         {
-          path: "/open-source",
-          name: "Open source",
+          path: "/community",
+          name: "Community",
         },
         {
           path: "/compony",
@@ -198,11 +198,15 @@ export default {
   }
   .compony-introduce-container {
     background: #fff;
-    margin-top: 140px;
+    margin-top: 83px;
     .introduce-item {
       overflow: hidden;
-      margin: 0 100px 90px 100px;
+      margin-bottom:85px;
       .introduce-page {
+        background: #F7F7F7;
+        width:607px;
+        padding:19px 65px 26px 46px;
+        border-radius: 20px;
         .introduce-title {
           color: #000;
           font-size: 36px;
@@ -227,25 +231,32 @@ export default {
       &:nth-of-type(odd) {
         .introduce-image {
           float: left;
-          width: 50%;
+          // width: 50%;
           height: 100%;
-          padding-left: 200px;
+          padding-left: 229px;
+          margin-right:56px;
+          img{
+            width:225px;
+            height:205px;
+          }
         }
         .introduce-page {
           float: left;
-          width: 50%;
+          // width: 50%;
         }
       }
 
       &:nth-of-type(even) {
         .introduce-image {
           float: right;
-          width: 50%;
+          // width: 50%;
           height: 100%;
+          margin-right: 198px;
         }
         .introduce-page {
           float: right;
-          width: 50%;
+          margin-right:67px;
+          // width: 50%;
         }
       }
     }

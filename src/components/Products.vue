@@ -51,7 +51,7 @@
               </div>
             </div>
           </div>
-          <div class="sub-feature-list-container">
+          <div class="sub-feature-list-container" style="margin-top:25px;">
             <div
               class="sub-feature-item"
               v-for="(item, index) in productsConfig.subFeatureTxts2"
@@ -145,8 +145,8 @@ export default {
           name: "Products",
         },
         {
-          path: "/open-source",
-          name: "Open source",
+          path: "/community",
+          name: "Community",
         },
         {
           path: "/compony",
@@ -246,6 +246,7 @@ export default {
     .head-container {
       height: 143px;
       text-align: center;
+      margin-bottom:43px;
       .subtitle-name {
         font-size: 32px;
         color: #fff;
@@ -259,7 +260,7 @@ export default {
       }
     }
     .sub-feature-list-container {
-      height: 412.5px;
+      height: 373.5px;
       display: flex;
       justify-content: space-between;
       margin:0 100px;
@@ -270,14 +271,14 @@ export default {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          top: 39px;
+          top: 0px;
           img{
             width:245px;
           height:151px;
           }
         }
         .card-container {
-          margin-top: 114.5px;
+          margin-top: 75.5px;
           padding-top: 80px;
           background: url("@/assets/product_card.png");
           background-size: 100% 100%;
@@ -290,12 +291,14 @@ export default {
             line-height:27px;
           }
           .item-content {
+            margin:0 auto;
             margin-top: 18px;
             font-size: 18px;
             line-height:22px;
             color: #959bb3;
             text-align: center;
             font-family: "AvenirNext-Regular";
+            width:235px;
           }
         }
       }
@@ -336,16 +339,17 @@ export default {
         display: flex;
         align-items: center;
         &:hover {
-          border: 3px solid rgba(119, 98, 237, 1);
-          border-radius: 20px;
-        }
-        &.cur-case-item {
           background: rgba(119, 98, 237, 1);
           color: #fff;
           border-radius: 20px;
+        }
+        &.cur-case-item {
+          border: 3px solid rgba(119, 98, 237, 1);
+          border-radius: 20px;
           &:hover{
             border: 3px solid #B6A9FF;
-            background:#B6A9FF
+            background:#fff;
+            color: #5d6d7e;
           }
         }
       }

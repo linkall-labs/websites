@@ -37,6 +37,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    isWhiteTheme:{
+      type:Boolean,
+      default:false
+    }
   },
   data() {
     return {
@@ -46,11 +50,11 @@ export default {
       logoImg: require("@/assets/logo.png"),
     };
   },
-  computed: {
-    isWhiteTheme() {
-      return this.$route.path === "/open-source";
-    },
-  },
+  // computed: {
+  //   isWhiteTheme() {
+  //     return this.$route.path === "/community";
+  //   },
+  // },
   methods: {
     gotoGithub() {},
     handleLogoClick() {
@@ -103,7 +107,10 @@ export default {
         font-size: 18px;
         line-height: 32px;
         height: 32px;
-        font-family: "AvenirNext-DemiBold";
+        
+        &.is-active{
+          font-family: "AvenirNext-DemiBold";
+        }
         &:hover {
           background: rgba(0, 0, 0, 0);
           color: #fff;
@@ -134,7 +141,10 @@ export default {
   &.white-theme {
     background: rgba(0, 0, 0, 0);
     .logo-container {
-      color: #5f5f5f;
+      .logo-box{
+        color: #000000;
+      }
+      
     }
 
     .el-menu {
