@@ -40,7 +40,8 @@
           <div class="content">{{ componyConfig.careersIntroduce }}</div>
         </div>
         <div class="career-image">
-          <img :src="photoWallImg" />
+          <!-- <img :src="photoWallImg" class="photo-wall"/> -->
+          <img :src="peopleImg" class="people-img"/>
         </div>
       </div>
         </div>
@@ -130,6 +131,7 @@ export default {
         other: "",
       },
       curIndex: 0,
+      peopleImg:require('@/assets/people.png'),
       bgImage:require('@/assets/compony_bg_1_2.png'),
       introduceImgList: [
         require("@/assets/compony_feature_1.png"),
@@ -301,6 +303,20 @@ export default {
       .career-image {
         margin-left: 130px;
         flex: 1;
+        position: relative;
+        background: url('@/assets/photo_wall.png') no-repeat;
+        height:192px;
+        // .photo-wall{
+        //   position: relative;
+        //   z-index:1
+        // }
+        .people-img{
+          position: absolute;
+          z-index:2;
+          left:40%;
+          top:50%;
+          transform: translate(-50%,-50%);
+        }
       }
     }
     .position-container {

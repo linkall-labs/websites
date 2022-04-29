@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PingFangMedium';
-    src: url('PingFang_Medium.otf');
+    src: url('PingFang_Medium.ttf');
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'PingFangRegular';
-    src: url('PingFang-Regular.otf');
+    src: url('PingFang-Regular.ttf');
 }
 @font-face {
     font-family: 'AvenirNext-Regular';
