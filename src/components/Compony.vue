@@ -1,21 +1,21 @@
 <template>
-  <article class="compony-page-container">
+  <article class="company-page-container">
     <div class="title-container">
       <Navigation :menuList="menuList" />
       <div id="center-page" class="title-box">
         <img class="bg-layer" :src="bgImage">
         <div class="content-layer">
-          <div class="title-name">{{ componyConfig.title }}</div>
-          <div class="title-content">{{ componyConfig.introduce }}</div>
+          <div class="title-name">{{ companyConfig.title }}</div>
+          <div class="title-content">{{ companyConfig.introduce }}</div>
         </div>
         
       </div>
     </div>
-    <div class="compony-introduce-container">
+    <div class="company-introduce-container">
       <div id="center-page">
          <div
         class="introduce-item"
-        v-for="(item, index) in componyConfig.componyIndroduceList"
+        v-for="(item, index) in companyConfig.companyIndroduceList"
         :key="item.title"
       >
         <div class="introduce-image">
@@ -33,11 +33,11 @@
     <div class="career-container">
       <div id="center-page">
         <div class="career-box">
-          <div class="career-theme">{{ componyConfig.careersTheme }}</div>
+          <div class="career-theme">{{ companyConfig.careersTheme }}</div>
       <div class="career-page">
         <div class="career-article">
-          <div class="title">{{ componyConfig.careersTitle }}</div>
-          <div class="content">{{ componyConfig.careersIntroduce }}</div>
+          <div class="title">{{ companyConfig.careersTitle }}</div>
+          <div class="content">{{ companyConfig.careersIntroduce }}</div>
         </div>
         <div class="career-image">
           <!-- <img :src="photoWallImg" class="photo-wall"/> -->
@@ -47,10 +47,10 @@
         </div>
       
       <!-- <div class="position-container">
-        <div class="position-title">{{ componyConfig.positionsTitle }}</div>
+        <div class="position-title">{{ companyConfig.positionsTitle }}</div>
         <div
           :class="['position-item', { 'cur-item': index === curIndex }]"
-          v-for="(item, index) in componyConfig.positionsList"
+          v-for="(item, index) in companyConfig.positionsList"
           :key="item.name"
           @click="
             () => {
@@ -87,12 +87,12 @@
       <div class="top-page"></div>
       <div class="bottom-page"></div>
       <div class="contact-us-page">
-        <div class="contact-title">{{ componyConfig.contactTitle }}</div>
-        <div class="contact-content">{{ componyConfig.contactIntroduce }}</div>
+        <div class="contact-title">{{ companyConfig.contactTitle }}</div>
+        <div class="contact-content">{{ companyConfig.contactIntroduce }}</div>
         <el-form class="contact-form">
           <el-row :gutter="20">
             <el-col
-              v-for="item in componyConfig.contactForm"
+              v-for="item in companyConfig.contactForm"
               :span="item.col"
               :key="item.key"
             >
@@ -111,32 +111,32 @@
 </template>
 
 <script>
-import componyConfig from "@/config/compony";
+import companyConfig from "@/config/company";
 import Navigation from "@/components/Navigation.vue";
 export default {
-  name: "compony-page",
+  name: "company-page",
   components: {
     Navigation,
   },
   data() {
     return {
-      componyConfig,
+      companyConfig,
       form: {
         firstname: "",
         lastname: "",
         email: "",
-        compony: "",
+        company: "",
         phone: "",
         region: "",
         other: "",
       },
       curIndex: 0,
       peopleImg:require('@/assets/people.png'),
-      bgImage:require('@/assets/compony_bg_1_2.png'),
+      bgImage:require('@/assets/company_bg_1_2.png'),
       introduceImgList: [
-        require("@/assets/compony_feature_1.png"),
-        require("@/assets/compony_feature_2.png"),
-        require("@/assets/compony_feature_3.png"),
+        require("@/assets/company_feature_1.png"),
+        require("@/assets/company_feature_2.png"),
+        require("@/assets/company_feature_3.png"),
       ],
       photoWallImg: require("@/assets/photo_wall.png"),
       positionImg1: require("@/assets/position_icon_1.png"),
@@ -151,7 +151,7 @@ export default {
           name: "Community",
         },
         {
-          path: "/compony",
+          path: "/company",
           name: "Company",
         },
       ],
@@ -161,11 +161,11 @@ export default {
 </script>
 
 <style lang="less">
-.compony-page-container {
+.company-page-container {
   .title-container {
     height: 553px;
     // background: linear-gradient(to right, #31395b, #17192e);
-    background: url("@/assets/compony_bg_1_1.png") no-repeat;
+    background: url("@/assets/company_bg_1_1.png") no-repeat;
     background-size: 100% 100%;
     
     .title-box {
@@ -198,7 +198,7 @@ export default {
       }
     }
   }
-  .compony-introduce-container {
+  .company-introduce-container {
     background: #fff;
     margin-top: 83px;
     .introduce-item {
