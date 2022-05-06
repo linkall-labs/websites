@@ -1,7 +1,7 @@
-const componyConfig = {
+const companyConfig = {
     title:'Explore the best practice in Serverless',
     introduce:`Vanus is building event-oriented middleware for the Serverless era Let's take an adventure on Serverless journey together`,
-    componyIndroduceList:[{
+    companyIndroduceList:[{
         title:'Mission',
         subtitle:'Help every enterprise complete the Serverless transformation of enterprise applications in the cloud-native era',
         content:''
@@ -44,7 +44,7 @@ const componyConfig = {
         placeholder:'Your Email',
         col:12
     },{
-        key:'compony',
+        key:'company',
         placeholder:'Company',
         col:12
     },{
@@ -61,4 +61,4 @@ const componyConfig = {
         col:24
     }]
 }
-export default componyConfig
+export default companyConfig

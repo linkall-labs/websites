@@ -16,7 +16,7 @@ const routes = [{
     name:Community.name,
     component:Community
 },{
-    path:'/compony',
+    path:'/company',
     name:Compony.name,
     component:Compony
 },]

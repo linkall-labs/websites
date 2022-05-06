@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "compony-page",
+  name: "company-page",
   props: {
     menuList: {
       type: Array,

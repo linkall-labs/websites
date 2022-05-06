@@ -149,7 +149,7 @@ export default {
           name: "Community",
         },
         {
-          path: "/compony",
+          path: "/company",
           name: "Company",
         },
       ],

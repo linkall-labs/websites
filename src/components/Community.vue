@@ -3,7 +3,7 @@
     <div class="header-contaienr">
       <Navigation :menuList="menuList" :isWhiteTheme="true"/>
       <div id="center-page" class="center-box">
-        <img :src="componyHeadBgImg" class="head-bg-img"/>
+        <img :src="companyHeadBgImg" class="head-bg-img"/>
         <div class="title-container">
           <div>
             <div class="title-name">{{ openSourceConfig.title }}</div>
@@ -83,7 +83,7 @@ export default {
   data() {
     return {
       openSourceConfig,
-      componyHeadBgImg:require('@/assets/opensource_bg_1_2.png'),
+      companyHeadBgImg:require('@/assets/opensource_bg_1_2.png'),
       findUsImg:require('@/assets/opensource_find_us.png'),
       githubImg: require("@/assets/github.png"),
       learnImg1: require("@/assets/learn_img_1.png"),
@@ -100,7 +100,7 @@ export default {
           name: "Community",
         },
         {
-          path: "/compony",
+          path: "/company",
           name: "Company",
         },
       ],
