@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 const Products  = ()=>import('@/components/Products')
 const Community = ()=>import('@/components/Community')
-const Compony = ()=>import('@/components/Compony')
+const Company = ()=>import('@/components/Company')
 Vue.use(VueRouter)
 const routes = [{
     path:'/',
@@ -17,8 +17,8 @@ const routes = [{
     component:Community
 },{
     path:'/company',
-    name:Compony.name,
-    component:Compony
+    name:Company.name,
+    component:Company
 },]
 
 export default new VueRouter({routes})
